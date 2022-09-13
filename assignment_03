@@ -1,0 +1,47 @@
+let num = 1;
+let level = 1;
+let printer = '';
+
+for (level = 1 ; level <= 5; level++ )
+{
+    for(let times = 1 ; times < level; times++)
+    {
+        printer += num++ + ' ';
+    }
+    console.log(printer);
+    printer = "";
+}
+
+let isarmstrong = 153;
+let temp = 0
+let calcit = isarmstrong;
+let result = "not an armstrong number"
+while (isarmstrong>0)
+{
+    temp = isarmstrong % 10;
+    temp = Math.pow(temp,3);
+    isarmstrong =Math.floor(isarmstrong / 10);
+    calcit = calcit - temp;
+}
+if(calcit === 0)
+    result = "is armstrong number";
+console.log(result);
+
+let factorialnumber = 143;
+let copyoffactorial = factorialnumber;
+result = 0
+while (factorialnumber>0)
+{
+    calcit = 1;
+    temp = factorialnumber % 10;
+    factorialnumber = Math.floor(factorialnumber/10);
+    for(temp;temp>1;temp--)
+    {
+        calcit = calcit *temp;
+    }
+    result = result + calcit;
+}
+if(result === copyoffactorial)
+    console.log("special number");
+else 
+    console.log("not special number");
