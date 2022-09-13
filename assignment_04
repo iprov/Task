@@ -1,0 +1,10 @@
+let house;
+function makehouse(house){
+    commonborder = house - 1;
+    let totalsticks = house * 6;
+    console.log(totalsticks);
+    if (commonborder>0)
+        totalsticks = totalsticks - house + 1; 
+    return totalsticks;
+    }
+console.log(makehouse(87));
